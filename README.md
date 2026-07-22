@@ -22,4 +22,4 @@ PokéFlip is a fan-made Pokémon memory card game built to test your memory and 
 - Local Storage
 
 > **Disclaimer:** Fan-made project. Pokémon © Nintendo, Game Freak & The Pokémon Company. Data provided by **PokéAPI (https://pokeapi.co/)**.
-# Pokeflip
+
