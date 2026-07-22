@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  /* ── DARK THEME ── */
+  --bg-main: #1A1F26;
+  --bg-secondary: #222831;
+  --bg-card: #393E46;
+  --bg-option: #2A3240;
+  --border-color: #948979;
+
+  --text-primary: #F5E6CC;
+  --text-secondary: #B6A28E;
+  --text-muted: #7D7466;
+
+  --gold-primary: #F7C948;
+  --gold-hover: #FFD95A;
+  --gold-deep: #E08C00;
+
+  --gold-gradient: linear-gradient(90deg, #F7C948 0%, #E08C00 100%);
+
+  --easy-mode: #4CAF50;
+  --medium-mode: #F4A261;
+  --hard-mode: #E05252;
+
+  --easy-bg: #4CAF5022;
+  --medium-bg: #F4A26122;
+  --hard-bg: #E0525222;
+
+  --easy-gradient: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+  --medium-gradient: linear-gradient(135deg, #F4A261 0%, #e07b00 100%);
+  --hard-gradient: linear-gradient(135deg, #E05252 0%, #b71c1c 100%);
+  --glow-rgb: 247, 201, 72;
+  --glow-opacity-low: 0.25;
+  --glow-opacity-high: 0.45;
+
+  --card-border: #393E46;
+  --heading-color: #DFD0B8;
+  --level-card-bg: #2A3240;
+}
+
+.theme-light {
+  --bg-main: #E8E0D0;
+  --bg-secondary: #F0E8D8;
+  --bg-card: #DDD0BC;
+  --bg-option: #E4D7C5;
+  --border-color: #553e12;
+
+  --text-primary: #3D2B1A;
+  --text-secondary: #6B4F35;
+  --text-muted: #8B7355;
+
+  --gold-primary: #D4A017;
+  --gold-hover: #B8860B;
+  --gold-deep: #8A6200;
+
+  --gold-gradient: linear-gradient(90deg, #D6B27A 0%, #B88A55 100%);
+
+  --accent-fire: #E05252;
+  --accent-grass: #4CAF50;
+  --accent-water: #4DA8DA;
+  --accent-psychic: #C77DFF;
+  --accent-ice: #90E0EF;
+
+  --easy-mode: #4CAF50;
+  --medium-mode: #F4A261;
+  --hard-mode: #E05252;
+
+  --easy-bg: #4CAF5022;
+  --medium-bg: #F4A26122;
+  --hard-bg: #E0525222;
+
+  --glow-rgb: 200, 150, 90;
+  --glow-opacity-low: 0.25;
+  --glow-opacity-high: 1;
+
+  /* ── NEW: level-card palette ── */
+  --card-border: #C8B89A;
+  --heading-color: #3D2B1A;
+  --level-card-bg: #E8DDC8;
+}
+
+@layer base {
+  body {
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+  }
+}
+
+@layer utilities {
+  .animate-text-glow {
+    animation: text_glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px rgba(var(--glow-rgb), var(--glow-opacity-low));
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(var(--glow-rgb), var(--glow-opacity-high));
+  }
+
+  100% {
+    box-shadow: 0 0 8px rgba(var(--glow-rgb), var(--glow-opacity-low));
+  }
+}
+
+
+@keyframes text_glow {
+  0% {
+    text-shadow: 0 0 4px var(--gold-deep);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px var(--gold-deep),
+
+  }
+
+  100% {
+    text-shadow: 0 0 4px var(--gold-deep);
+  }
+}
+
+.card-shimmer {
+  animation: fadePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes fadePulse {
+
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
